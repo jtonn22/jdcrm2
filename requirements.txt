@@ -4,6 +4,7 @@ autopep8==1.5.5
 black==20.8b1
 click==7.1.2
 crispy-tailwind==0.3.0
+dj-database-url==0.5.0
 Django==3.1.4
 django-crispy-forms==1.11.1
 environs==9.3.1
