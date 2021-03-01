@@ -30,7 +30,7 @@ DEBUG = env.bool("DJANGO_DEBUG", default=False)
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env.str("DJANGO_SECRET_KEY")
 
-ALLOWED_HOSTS = ["glacial-journey-62334.herokuapp.com/", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
