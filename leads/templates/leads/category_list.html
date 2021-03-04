@@ -11,6 +11,15 @@
             </p>
         </div>
         <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+            
+        {% if request.user.is_organisor %}
+        <div>
+            <a class="text-gray-500 hover:text-blue-500" href="{% url 'leads:category-create' %}">
+                Create a new category
+            </a>
+        </div>
+        {% endif %}   
+
         <table class="table-auto w-full text-left whitespace-no-wrap">
             <thead>
             <tr>
