@@ -142,3 +142,7 @@ cython_debug/
 
 # vscode
 .vscode/
+
+static_root
+media_root
+leads.csv

@@ -102,10 +102,10 @@
 
         <div class="mt-5 flex flex-wrap -m-4">
         {% if unassigned_leads.exists %}
+            <div class="w-full mb-6 py-6 flex justify-between items-center border-b border-gray-200">
+                <h1 class="text-4xl twxt-grey-800">Unassigned Leads</h1>
+            </div>
             {% for lead in unassigned_leads %}
-                <div class="w-full mb-6 py-6 flex justify-between items-center border-b border-gray-200">
-                    <h1 class="text-4xl twxt-grey-800">Unassigned Leads</h1>
-                </div>
                 <div class="p-4 lg:w-1/2 md:w-full">
                     <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
                         <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">

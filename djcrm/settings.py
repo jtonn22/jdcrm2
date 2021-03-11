@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     # third party apps
     "crispy_forms",
     "crispy_tailwind",
+    "tailwind",
+    "theme",
     # Local Apps
     "leads",
     "agents",
@@ -150,6 +152,9 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = "media_root"
 STATIC_ROOT = "static_root"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
@@ -174,3 +179,6 @@ SECURE_HSTS_PRELOAD = env.bool("SECURE_HSTS_PRELOAD", default=True)
 SESSION_COOKIE_SECURE = env.bool("DJANGO_SESSION_COOKIE_SECURE", default=True)
 CSRF_COOKIE_SECURE = env.bool("DJANGO_CSRF_COOKIE_SECURE", default=True)
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+TAILWIND_APP_NAME = 'theme'
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"

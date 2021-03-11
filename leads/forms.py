@@ -1,7 +1,8 @@
 from django import forms
+from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm, UsernameField
-from .models import Lead, Agent, Category
+from .models import Lead, Agent, Category, FollowUp
 
 User = get_user_model()
 
@@ -17,6 +18,33 @@ class LeadModelForm(forms.ModelForm):
             "description",
             "phone_number",
             "email",
+            "profile_picture",
+        )
+
+    # validate data that comes through in a form by using a method that starts with clan
+
+    # this method validates a specific field in the form
+    def clean_first_name(self):
+        data = self.cleaned_data["first_name"]
+        # if data != "Joe":
+        #     raise ValidationError("Your name is not Joe")
+        return data
+
+    # this method validates an entire form and provides a general form error
+    def clean(self):
+        pass
+        # first_name = self.cleaned_data["first_name"]
+        # last_name = self.cleaned_data["last_name"]
+        # if first_name + last_name != "Joe Soap":
+        #     raise ValidationError("Your name is not Joe Soap")
+
+
+class FollowUpModelForm(forms.ModelForm):
+    class Meta:
+        model = FollowUp
+        fields = (
+            "notes",
+            "file",
         )
 
 
